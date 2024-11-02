@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Hosting - Spook Hosting</title>
+    <link rel="stylesheet" href="styles.css">  </head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Spook Hosting</h1>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="#dashboard">Dashboard</a>
+                <a href="#create-bot">Crear Bot</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="dashboard">
+            <div class="container">
+                <h2>Dashboard</h2>
+                <p>Aquí puedes gestionar tus bots de Discord.</p>
+
+                <div class="bot-list">
+                    </div>
+            </div>
+        </section>
+
+        <section id="create-bot">
+            <div class="container">
+                <h2>Crear Bot</h2>
+                <form id="create-bot-form">
+                    <label for="bot-name">Nombre del Bot:</label>
+                    <input type="text" id="bot-name" name="bot-name" required>
+
+                    <label for="bot-token">Token del Bot:</label>
+                    <input type="text" id="bot-token" name="bot-token" required>
+
+                    <button type="submit">Crear Bot</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container">
+                <h2>Preguntas Frecuentes</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>¿Cómo obtengo el token de mi bot?</h3>
+                        <p class="answer">Puedes obtener el token de tu bot en la página de desarrolladores de Discord.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Puedo cambiar el nombre de mi bot después de crearlo?</h3>
+                        <p class="answer">Sí, puedes cambiar el nombre de tu bot en cualquier momento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Spook Hosting</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
