@@ -1,6 +1,6 @@
 const hostButton = document.getElementById('hostButton');
+const hostingURL = "URL_DEL_HOST"; // Reemplaza "URL_DEL_HOST" con la URL real
 
 hostButton.addEventListener('click', () => {
-    // Reemplaza "URL_DEL_HOST" con la URL real de tu página de hosting
-    window.location.href = "URL_DEL_HOST"; 
+    window.location.href = hostingURL;
 });
