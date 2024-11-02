@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestionar Hosting - Spook Hosting</title>
-    <link rel="stylesheet" href="styles.css">  </head>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
     <header>
         <div class="container">
             <h1>Spook Hosting</h1>
             <nav>
-                <a href="index.html">Inicio</a>
-                <a href="#dashboard">Dashboard</a>
-                <a href="#create-bot">Crear Bot</a>
-                <a href="#faq">FAQ</a>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#create-bot">Crear Bot</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -23,16 +26,14 @@
             <div class="container">
                 <h2>Dashboard</h2>
                 <p>Aquí puedes gestionar tus bots de Discord.</p>
-
-                <div class="bot-list">
-                    </div>
+                <div class="bot-list"></div>
             </div>
         </section>
 
         <section id="create-bot">
             <div class="container">
                 <h2>Crear Bot</h2>
-                <form id="create-bot-form">
+                <form id="create-bot-form" aria-labelledby="create-bot">
                     <label for="bot-name">Nombre del Bot:</label>
                     <input type="text" id="bot-name" name="bot-name" required>
 
@@ -48,14 +49,14 @@
             <div class="container">
                 <h2>Preguntas Frecuentes</h2>
                 <div class="faq-list">
-                    <div class="faq-item">
-                        <h3>¿Cómo obtengo el token de mi bot?</h3>
+                    <details class="faq-item">
+                        <summary>¿Cómo obtengo el token de mi bot?</summary>
                         <p class="answer">Puedes obtener el token de tu bot en la página de desarrolladores de Discord.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h3>¿Puedo cambiar el nombre de mi bot después de crearlo?</h3>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Puedo cambiar el nombre de mi bot después de crearlo?</summary>
                         <p class="answer">Sí, puedes cambiar el nombre de tu bot en cualquier momento.</p>
-                    </div>
+                    </details>
                 </div>
             </div>
         </section>
