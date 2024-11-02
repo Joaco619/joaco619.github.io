@@ -6,32 +6,92 @@
     <title>Spook Hosting</title>
     <style>
         body {
-            font-family: sans-serif; 
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4; 
-            color: #333; 
+            background-color: #f4f4f4;
+            color: #333;
         }
 
         header {
-            background-color: #333; 
-            color: #fff; 
+            background-color: #333;
+            color: #fff;
             text-align: center;
-            padding: 1em 1  0; 
-        }
-
-        main {
-            padding: 20px; 
-            max-width: 800px; 
-            margin: 20px auto; 
-            background-color: #fff; 
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            padding: 2em 0; 
+            overflow: hidden; /* Para que la animación del h1 no se salga del header */
         }
 
         h1 {
-            margin-bottom: 0.5em; 
+            font-size: 3em; 
+            font-family: 'Pacifico', cursive; /* Tipografía más llamativa */
+            margin: 0;
+            padding: 0;
+            animation: slideIn 2s ease forwards; /* Animación de entrada */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra al texto */
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 1.2em; 
+            line-height: 1.6; 
+        }
+
+        ul {
+            list-style: none; 
+            padding: 0; 
+        }
+
+        li {
+            font-size: 1.1em; 
+            margin-bottom: 10px; 
+            position: relative; 
+            padding-left: 30px; 
+        }
+
+        li::before {
+            content: "\2713"; 
+            color: #333; 
+            font-size: 1.5em; 
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+
+        a.button {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease; 
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        a.button:hover {
+            background-color: #555; 
+            transform: translateY(-2px); 
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <header>
@@ -40,13 +100,13 @@
 
     <main>
         <p>El mejor lugar para alojar tus bots de Discord.</p>
-        <p>Ofrecemos:</p> 
+        <p>Ofrecemos:</p>
         <ul>
             <li>Hosting de alta calidad</li>
             <li>Soporte 24/7</li>
             <li>Precios accesibles</li>
         </ul>
-        <a href="#" class="button">Empieza ahora</a> 
+        <a href="#" class="button">Empieza ahora</a>
     </main>
 
 </body>
