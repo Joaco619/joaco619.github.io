@@ -3,7 +3,7 @@ name: Deploy static content to GitHub Pages
 on:
   push:
     branches: ["main"]  # Trigger on pushes to the main branch
-  workflow_dispatch:    # Allow manual triggering
+  workflow_dispatch:     # Allow manual triggering
 
 permissions:
   contents: read
@@ -25,10 +25,14 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .   # Upload the entire repository
+      - name: Build with Jekyll (if applicable)
+        # This step is only needed if you're using Jekyll
+        uses: actions/jekyll-build-pages@v1 
+        # If you're not using Jekyll, comment out the above line and uncomment the next one
+        # - name: Upload artifact 
+        #   uses: actions/upload-pages-artifact@v3
+        #   with:
+        #     path: .
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
